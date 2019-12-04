@@ -8,7 +8,7 @@ var fs = require('fs');
 var http = require('http');
 var port = 3000;
 // all requests have this base path
-var basePath = '/api';
+var basePath = '/fake-server';
 
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
