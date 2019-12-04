@@ -1,0 +1,23 @@
+node_modules/
+.env
+.phraseapp.yml
+tmp/
+build/
+
+# OS generated files
+.DS_Store
+
+# terraform generated files
+.terraform/*
+**/.terraform/*
+**/terraform.tfstate*
+
+# Intellij IDE-generated files
+.idea/
+*.iml
+
+# NewRelic
+newrelic_agent.log
+
+# Caches from jest testing
+jest_0/

@@ -1,0 +1,12 @@
+{
+  "name": "fake_server",
+  "version": "0.0.1",
+  "description": "dumb server for load testing",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "morgan": "*",
+    "express": "*"
+  }
+}
