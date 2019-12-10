@@ -7,11 +7,11 @@ var morgan = require('morgan');
 var fs = require('fs');
 var http = require('http');
 var port = 3000;
-// all requests have this base path
-var basePath = '/fake-server';
-
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
+
+// all requests have this base path
+var basePath = process.env.ROOT_PATH ? process.env.ROOT_PATH : '/fake-server' 
 
 if (cluster.isMaster) {
   // Fork workers.

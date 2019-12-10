@@ -16,7 +16,7 @@ AWS_REGION="us-east-1"
 AWS_ACCOUNT_ID="$(aws sts get-caller-identity --output text --query 'Account')"
 eval $(aws ecr get-login --no-include-email --region ${AWS_REGION} | sed 's|https://||')
 
-URL="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/fake-server:${TAG}"
+URL="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/fake-service:${TAG}"
 docker build -t $URL .
 docker push $URL
 echo
